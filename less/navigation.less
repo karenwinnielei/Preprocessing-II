@@ -7,12 +7,21 @@ header{
     .container {
         .flexin(row, space-between, center);
 
+        @media @tablet{
+            width: 90%;
+        }
+
         @media @mobile{
             .flexin(column, center, center);
         }
         nav{
             width: 40%;    
             .flexin(row, space-evenly, center);
+
+            @media @tablet{
+                width: 50%;
+                .flexin(row, space-between, center);
+            }
             @media @mobile{
                 width: 100%;
                 .flexin(row, space-evenly, center);
@@ -20,9 +29,9 @@ header{
             }
     
             a{
-                font-size: 1.6rem;
                 text-decoration: none;
                 color: @font-color;
+
     
                 }//this closes nav a 
             }// this closes nav
