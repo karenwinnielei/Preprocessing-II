@@ -1,18 +1,32 @@
 // Navigation Styles here
 header{
-    .flexin(row, space-between, center);
-    padding: 4% 0;
+    width: 100%;
     border-bottom: 2px dashed @navigation-border;
+    padding: 2% 0;
 
-    nav{
-    width: 40%;    
-    .flexin(row, space-evenly, center);
+    .container {
+        .flexin(row, space-between, center);
 
-    a{
-        font-size: 1.6rem;
-        text-decoration: none;
-        color: @font-color;
+        @media @mobile{
+            .flexin(column, center, center);
+        }
+        nav{
+            width: 40%;    
+            .flexin(row, space-evenly, center);
+            @media @mobile{
+                width: 100%;
+                .flexin(row, space-evenly, center);
+                padding-top: 2%;
+            }
+    
+            a{
+                font-size: 1.6rem;
+                text-decoration: none;
+                color: @font-color;
+    
+                }//this closes nav a 
+            }// this closes nav
+      }// this closes .container
 
-        }//this closes nav a 
-    }// this closes nav
+       
 }// this closes header

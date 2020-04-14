@@ -1,4 +1,5 @@
 .home {
+
   #about{
     .flexin(column, center, center);
     padding-bottom: 2%;
@@ -6,7 +7,7 @@
 
     .text-content{
       padding-top: 2%;
-    }
+    }// this closes .text-content
   }// this closes about section
 
 
@@ -16,41 +17,62 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @media @mobile{
+      .flexin(column, center, center);
+    }// this closes @media @mobile for .content-section
+
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
-    }
+
+      @media @mobile{
+        width: 100%;
+      }// this closes @media mobile for .text-content
+    }// this closes .text-content in .content-section
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile{
+        width: 100%;
+      }// this closes @media @mobile for .img-content
+
       img {
         border-radius: 10px;
-      }
-    }
-  }
+      }// this closes img
+    }// this closes .img-content
+  }// this closes .content-section
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile{
+      .flexin(column-reverse, center, center);
+    }// this closes @media @mobile for .inverse-content
+    
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
-    }
+    }// this closes .text-content in .inverse-content
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
-    }
+    }// this closes .img-content in .inverse-content
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media @mobile{
+      width: 100%;
+    }
 
     img {
       border-radius: 10px;
@@ -63,17 +85,35 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile{
+      .flexin(column, center, center);
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
 
+      @media @mobile{
+        width: 80%;
+      }
+
       .btn{
         .button(@button-bg, @button-border, @button-color);
+
+        @media @mobile{
+          padding: 3%;
+          margin: 0 auto;
+          width: 100%;
+        }
 
         a{
           color: @white;
         }
       }
     }
+  }
+
+  @media @mobile{
+    width: 90%;
   }
 }// home
